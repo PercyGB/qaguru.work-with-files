@@ -89,7 +89,7 @@ public class AssertDataFromFilesTests {
     }
 
     @Test
-    void docxFileCompareTest() throws IOException {
+    void assertDataFromDocxFile() throws IOException {
         String actualData = readDocxFromPath(docxFilePath).getText();
 
         assertThat(actualData, containsString(expectedData));
