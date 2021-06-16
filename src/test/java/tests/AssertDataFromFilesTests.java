@@ -31,7 +31,7 @@ public class AssertDataFromFilesTests {
     private String docFilePath = "./src/test/resources/files/1.doc";
     private String docxFilePath = "./src/test/resources/files/1.docx";
 
-    private String expectedData = "Hello, World";
+    private String expectedData = "Hello, World!";
 
     @Test
     void assertDataFromTxtFile() throws IOException {
@@ -93,6 +93,7 @@ public class AssertDataFromFilesTests {
         String actualData = readDocxFromPath(docxFilePath).getText();
 
         assertThat(actualData, containsString(expectedData));
+        System.out.println();
     }
 
 }
