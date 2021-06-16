@@ -1,18 +1,11 @@
 package tests;
 
 import com.codeborne.pdftest.PDF;
-import com.codeborne.selenide.logevents.SelenideLogger;
 import com.codeborne.xlstest.XLS;
-import io.qameta.allure.selenide.AllureSelenide;
 import net.lingala.zip4j.exception.ZipException;
-import org.apache.poi.hwpf.HWPFDocument;
-import org.apache.poi.hwpf.extractor.WordExtractor;
-import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.junit.jupiter.api.Test;
 import utils.Files;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -31,7 +24,7 @@ public class AssertDataFromFilesTests {
     private String docFilePath = "./src/test/resources/files/1.doc";
     private String docxFilePath = "./src/test/resources/files/1.docx";
 
-    private String expectedData = "Hello, World";
+    private String expectedData = "Hello, World!";
 
     @Test
     void assertDataFromTxtFile() throws IOException {
