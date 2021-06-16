@@ -93,7 +93,6 @@ public class AssertDataFromFilesTests {
         String actualData = readDocxFromPath(docxFilePath).getText();
 
         assertThat(actualData, containsString(expectedData));
-        System.out.println("sss");
     }
 
 }
